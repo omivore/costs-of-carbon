@@ -15,7 +15,7 @@ class Travel {
         var offsetType = document.createElement('div');
         var travelTypeHeader = document.createElement('h1');
         travelTypeHeader.innerHTML = "How are you traveling?";
-        var images = ["blueCar.png", "airplane.png", "train.png", "bus.png"];
+        var images = ["car.png", "plane.png", "train.png", "bus.png"];
         var tbl = document.createElement("table");
         // creates a <tbody> element
         var tblBody = document.createElement("tbody");
@@ -118,7 +118,7 @@ buttons.appendChild(nextButton);
 var offsetType = document.createElement('div');
 var travelTypeHeader = document.createElement('h1');
 travelTypeHeader.innerHTML = "How are you traveling?";
-var images = ["blueCar.png", "airplane.png", "train.png", "bus.png"];
+var images = ["car.png", "plane.png", "train.png", "bus.png"];
 var tbl = document.createElement("table");
 generate_table();
 
