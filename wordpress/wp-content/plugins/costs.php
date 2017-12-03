@@ -5,6 +5,7 @@
  * Version:       0.1
  * Author:        Extra Xtra
  */
+
 class xtra_Costs_Caclulator extends WP_Widget {
     // Set up the widget name and description.
     public function __construct() {
@@ -40,9 +41,10 @@ class xtra_Costs_Caclulator extends WP_Widget {
     }
 
 }
+
 // Register the widget.
 function xtra_register_costs_calculator() {
-  register_widget('xtra_Costs_Calculator');
+    register_widget('xtra_Costs_Caclulator');
 }
 add_action('widgets_init', 'xtra_register_costs_calculator');
 ?>
