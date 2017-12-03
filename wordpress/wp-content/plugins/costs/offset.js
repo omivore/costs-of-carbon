@@ -66,12 +66,15 @@ class Travel {
     }
 
     subTypePage() {
+    alert("called");
         clearPlug();
+    alert("cleared");
         var pane = document.createElement('div');
         var typeList = document.createElement("ul");
         var paneHeader = document.createElement('h1');
         paneHeader.innerHTML = "Could you be more specific?";
-        var cars = {
+    alert("Define");
+        var subTypes = {
             "car": ["Passenger", "Light Truck", "Motorcycle"],
             "train": ["Intercity Rail", "Commuter Rail", "Transit Rail"],
             "plane": ["<300 miles", "between 300 and 2300 miles", ">2300 miles"]
@@ -82,7 +85,7 @@ alert("HDKJ");
             return;
         } else {
             var subType, cellText;
-            for (item of cars[this.type]) {
+            for (item of subTypes[this.type]) {
                 subType = document.createElement("li");
                 cellText = document.createElement("input");
                 cellText.setAttribute("type", "radio");
