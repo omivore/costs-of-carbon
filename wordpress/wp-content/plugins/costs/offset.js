@@ -63,7 +63,7 @@ class Travel {
         // put the <tbody> in the <table>
         tbl.appendChild(tblBody);
 
-        pane.appendChild(travelTypeHeader);
+        pane.appendChild(header);
         pane.appendChild(tbl);
         /*offsetType.appendChild(backButton);
         offsetType.appendChild(nextButton);*/
