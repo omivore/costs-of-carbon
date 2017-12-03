@@ -40,8 +40,8 @@ class Travel {
                 var cell = document.createElement("td");
                 var cellText = document.createElement("img");
                 cellText.src = "wp-content/plugins/costs/imgs/" + images[count];
-        alert(images[count].length);
-                callText.alt = images[count].substring(0, images[count].length - 2);
+        alert(images[count].substring(0,4));
+                callText.alt = images[count].substring(0, images[count].length - 4);
         alert("3");
                 cellText.height = "50";
                 cellText.addEventListener("click", function(event) {
