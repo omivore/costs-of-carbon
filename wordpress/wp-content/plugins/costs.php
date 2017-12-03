@@ -20,7 +20,7 @@ class xtra_Costs_Caclulator extends WP_Widget {
         $tagline = get_bloginfo( 'description' );
         echo $args['before_widget'] . $args['before_title'] . $instance['funds_use'] . $args['after_title']; ?>
         <div id="xtra_offsetCalculator"></div>
-        <script src="offset.js"></script>
+        <script src="wp-content/plugins/offset.js"></script>
         <?php echo $args['after_widget'];
     }
 
