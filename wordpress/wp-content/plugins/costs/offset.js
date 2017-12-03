@@ -107,7 +107,6 @@ class Travel {
    	}
 
     passengersPage() {
-        alert("We're working");
         var pane = document.createElement("div");
         
     }
