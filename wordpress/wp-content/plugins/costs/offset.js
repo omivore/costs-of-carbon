@@ -144,7 +144,7 @@ function generate_table() {
         // the end of the table row
         var cell = document.createElement("td");
         var cellText = document.createElement("img");
-        cellText.src = images[count];
+        cellText.src = "wp-content/plugins/costs/imgs/" + images[count];
         cellText.height = "50";
         if(count == 0){
             cellText.addEventListener("click", function(event){
