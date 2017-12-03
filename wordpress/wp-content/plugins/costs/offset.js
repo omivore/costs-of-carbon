@@ -2,6 +2,7 @@
 
 function clearPlug() {
     document.getElementById("xtra_offsetCalculator").innerHTML = "";
+    alert("HK:");
 }
 
 function setPlug(newPane) {
@@ -10,16 +11,17 @@ function setPlug(newPane) {
 
 class Travel {
     constructor() {
-        alert("HKL");
         this.page = 1;
         this.type = null;
         this.subtype = null;
         this.passengers = 0;
         this.distance = 0;
+        alert("LDDS");
         typePage();
     }
 
     typePage() {
+        alert("YEHA");
         clearPlug();
         alert("HI");
         var pane = document.createElement('div');
