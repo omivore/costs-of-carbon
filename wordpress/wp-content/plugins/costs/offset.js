@@ -2,11 +2,11 @@
 
 function clearPlug() {
     document.getElementById("xtra_offsetCalculator").innerHTML = "";
-    alert("HK:");
 }
 
 function setPlug(newPane) {
     document.getElementById("xtra_offsetCalculator").appendChild(newPane);
+    alert("??:");
 }
 
 class Travel {
@@ -16,14 +16,11 @@ class Travel {
         this.subtype = null;
         this.passengers = 0;
         this.distance = 0;
-        alert("LDDS");
         this.typePage();
     }
 
     typePage() {
-        alert("YEHA");
         clearPlug();
-        alert("HI");
         var pane = document.createElement('div');
         var header = document.createElement('h1');
         header.innerHTML = "How are you traveling?";
