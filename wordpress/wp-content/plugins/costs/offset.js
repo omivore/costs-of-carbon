@@ -41,6 +41,8 @@ class Travel {
                 var cellText = document.createElement("img");
                 cellText.src = "wp-content/plugins/costs/imgs/" + images[count];
         alert(images[count].substring(0, images[count].length -4));
+                callText.alt = "rip";
+                alert("4");
                 callText.alt = images[count].substring(0, images[count].length - 4);
         alert("3");
                 cellText.height = "50";
