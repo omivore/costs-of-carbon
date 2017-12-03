@@ -40,7 +40,9 @@ class Travel {
                 var cell = document.createElement("td");
                 var cellText = document.createElement("img");
                 cellText.src = "wp-content/plugins/costs/imgs/" + images[count];
+        alert("2");
                 callText.alt = images[count].substring(0, images[count].length - 2);
+        alert("3");
                 cellText.height = "50";
                 cellText.addEventListener("click", function(event) {
                     alert(event.target);
@@ -48,7 +50,6 @@ class Travel {
                     this.subTypePage();
                 });
 
-        alert("2");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 count++;
