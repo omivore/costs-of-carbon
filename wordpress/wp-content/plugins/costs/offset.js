@@ -31,6 +31,7 @@ class Travel {
         // creating all cells
         for (var i = 0; i < 2; i++) {
             // creates a table row
+        alert("1");
             var row = document.createElement("tr");
             for (var j = 0; j < 2; j++) {
                 // Create a <td> element and a text node, make the text
@@ -44,9 +45,10 @@ class Travel {
                 cellText.addEventListener("click", function(event) {
                     alert(event.target);
                     this.type = event.target.alt;
-                    subTypePage();
+                    this.subTypePage();
                 });
 
+        alert("2");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 count++;
@@ -55,6 +57,7 @@ class Travel {
             // add the row to the end of the table body
             tblBody.appendChild(row);
         }
+        alert("3");
  
         // put the <tbody> in the <table>
         tbl.appendChild(tblBody);
@@ -63,7 +66,7 @@ class Travel {
         pane.appendChild(tbl);
         /*offsetType.appendChild(backButton);
         offsetType.appendChild(nextButton);*/
-
+    alert("4");
         setPlug(pane);
     }
 
