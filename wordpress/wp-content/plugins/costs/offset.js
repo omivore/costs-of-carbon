@@ -40,7 +40,7 @@ class Travel {
                 var cell = document.createElement("td");
                 var cellText = document.createElement("img");
                 cellText.src = "wp-content/plugins/costs/imgs/" + images[count];
-        alert("2");
+        alert(images[count].length);
                 callText.alt = images[count].substring(0, images[count].length - 2);
         alert("3");
                 cellText.height = "50";
