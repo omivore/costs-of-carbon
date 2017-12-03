@@ -76,7 +76,7 @@ class Travel {
             "train": ["Intercity Rail", "Commuter Rail", "Transit Rail"],
             "plane": ["<300 miles", "between 300 and 2300 miles", ">2300 miles"]
         }
-
+alert("HDKJ");
         if (this.type == "bus") {
             passengersPage();
             return;
