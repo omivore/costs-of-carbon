@@ -20,6 +20,7 @@ class Travel {
 
     typePage() {
         clearPlug();
+        alert("HI");
         var pane = document.createElement('div');
         var header = document.createElement('h1');
         header.innerHTML = "How are you traveling?";
@@ -113,6 +114,7 @@ class Travel {
     }
 }
 
+alert("HDKS");
 new Travel();
 /*
 var backButton = document.createElement('span');
