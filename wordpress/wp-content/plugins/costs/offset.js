@@ -10,6 +10,7 @@ function setPlug(newPane) {
 
 class Travel {
     constructor() {
+        alert("HKL");
         this.page = 1;
         this.type = null;
         this.subtype = null;
@@ -114,7 +115,6 @@ class Travel {
     }
 }
 
-alert("HDKS");
 new Travel();
 /*
 var backButton = document.createElement('span');
