@@ -29,7 +29,7 @@ class xtra_Costs_Caclulator extends WP_Widget {
         $funds_use = !empty( $instance['funds_use'] ) ? $instance['funds_use'] : ''; ?>
         <p>
             <label for="<?php echo $this->get_field_id('funds_use'); ?>">Where will the funds go?</label>
-            <textarea id="<?php echo $this->get_field_id('funds_use'); ?>" name="<?php echo $this->get_field_name('funds_use'); ?>" value="<?php echo esc_attr($funds_use); ?>" />
+            <textarea id="<?php echo $this->get_field_id('funds_use'); ?>" name="<?php echo $this->get_field_name('funds_use'); ?>" value="<?php echo esc_attr($funds_use); ?>"></textarea>
         </p><?php
     }
 
