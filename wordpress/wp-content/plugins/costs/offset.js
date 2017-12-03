@@ -17,7 +17,7 @@ class Travel {
         this.passengers = 0;
         this.distance = 0;
         alert("LDDS");
-        typePage();
+        this.typePage();
     }
 
     typePage() {
