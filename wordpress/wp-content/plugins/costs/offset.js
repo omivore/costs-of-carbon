@@ -37,18 +37,18 @@ class Travel {
             cellText.height = "50";
             if(count == 0){
                 cellText.addEventListener("click", function(event){
-                    document.getElementById("offsetCalculator").innerHTML = "";
-                    document.getElementById("offsetCalculator").appendChild(carType).appendChild(buttons);
+                    document.getElementById("xtra_offsetCalculator").innerHTML = "";
+                    document.getElementById("xtra_offsetCalculator").appendChild(carType).appendChild(buttons);
                     page = 1.5;
                 });
             } else if(count == 1){
                 cellText.addEventListener("click", function(event){
-                    document.getElementById("offsetCalculator").innerHTML = "";
+                    document.getElementById("xtra_offsetCalculator").innerHTML = "";
                 });
             } else if(count == 2){
                 cellText.addEventListener("click", function(event){
-                    document.getElementById("offsetCalculator").innerHTML = "";
-                    document.getElementById("offsetCalculator").appendChild(trainType).appendChild(buttons);
+                    document.getElementById("xtra_offsetCalculator").innerHTML = "";
+                    document.getElementById("xtra_offsetCalculator").appendChild(trainType).appendChild(buttons);
                     page = 1.5;
                 });
             }
@@ -95,11 +95,11 @@ backButton.className = "previous round";
 backButton.innerHTML = "&#8249;";
 backButton.addEventListener("click", function(event){
     if(page == 2){
-        document.getElementById("offsetCalculator").innerHTML = "";
-        document.getElementById("offsetCalculator").appendChild(offsetType);
+        document.getElementById("xtra_offsetCalculator").innerHTML = "";
+        document.getElementById("xtra_offsetCalculator").appendChild(offsetType);
         page--;
     } else if (page == 3){
-        document.getElementById("offsetCalculator").innerHTML = "";
+        document.getElementById("xtra_offsetCalculator").innerHTML = "";
 
         page--;
     }
@@ -149,19 +149,19 @@ function generate_table() {
         cellText.height = "50";
         if(count == 0){
             cellText.addEventListener("click", function(event){
-                document.getElementById("offsetCalculator").innerHTML = "";
-                document.getElementById("offsetCalculator").appendChild(carType).appendChild(buttons);
+                document.getElementById("xtra_offsetCalculator").innerHTML = "";
+                document.getElementById("xtra_offsetCalculator").appendChild(carType).appendChild(buttons);
                 page = 1.5;
             });
         } else if(count == 1){
             cellText.addEventListener("click", function(event){
-                document.getElementById("offsetCalculator").innerHTML = "";
+                document.getElementById("xtra_offsetCalculator").innerHTML = "";
 
             });
         } else if(count == 2){
             cellText.addEventListener("click", function(event){
-                document.getElementById("offsetCalculator").innerHTML = "";
-                document.getElementById("offsetCalculator").appendChild(trainType).appendChild(buttons);
+                document.getElementById("xtra_offsetCalculator").innerHTML = "";
+                document.getElementById("xtra_offsetCalculator").appendChild(trainType).appendChild(buttons);
                 page = 1.5;
             });
         }
@@ -180,7 +180,7 @@ function generate_table() {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    document.getElementById("offsetCalculator").appendChild(offsetType);
+    document.getElementById("xtra_offsetCalculator").appendChild(offsetType);
 });
 
 /***********************************/
