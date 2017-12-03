@@ -11,7 +11,7 @@ function setPlug(newPane) {
 class Travel {
     constructor() {
         this.page = 1;
-        this.type = null;
+        this.type = "";
         this.subtype = null;
         this.passengers = 0;
         this.distance = 0;
@@ -76,8 +76,6 @@ class Travel {
             "train": ["Intercity Rail", "Commuter Rail", "Transit Rail"],
             "plane": ["<300 miles", "between 300 and 2300 miles", ">2300 miles"]
         }
-        pane.appendChild(paneHeader);
-        pane.appendChild(carButtonTbl);
 
         if (this.type == "bus") {
             passengersPage();
@@ -92,6 +90,8 @@ class Travel {
 
                 typeList.appendChild(cellText);
             }
+            pane.appendChild(paneHeader);
+            pane.appendChild(typeList);
             
             var nextButton = document.createElement('span');
             nextButton.className = "next round";
