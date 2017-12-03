@@ -11,7 +11,7 @@ class xtra_Costs_Caclulator extends WP_Widget {
     public function __construct() {
         $widget_options = array('classname' => 'costs_carbon_calculator',
                                 'description' => 'A carbon footprint offset calculator' );
-        parent::__construct( 'costs_carbon_calculator', 'Costs of Carbon Calculator', $widget_options );
+        parent::__construct( 'costs_carbon_calculator', 'Carbon Calculator', $widget_options );
     }
 
     // Create the widget output.
@@ -19,8 +19,8 @@ class xtra_Costs_Caclulator extends WP_Widget {
         $blog_title = get_bloginfo( 'name' );
         $tagline = get_bloginfo( 'description' );
         echo $args['before_widget'] . $args['before_title'] . $instance['funds_use'] . $args['after_title']; ?>
-        <p><strong>Site Name:</strong> <?php echo $blog_title ?></p>
-        <p><strong>Tagline:</strong> <?php echo $tagline ?></p>
+        <div id="xtra_offsetCalculator"></div>
+        <script src="offset.js"></script>
         <?php echo $args['after_widget'];
     }
 
@@ -28,8 +28,8 @@ class xtra_Costs_Caclulator extends WP_Widget {
     public function form($instance) {
         $funds_use = !empty( $instance['funds_use'] ) ? $instance['funds_use'] : ''; ?>
         <p>
-            <label for="<?php echo $this->get_field_id('funds_use'); ?>">Title:</label>
-            <input type="text" id="<?php echo $this->get_field_id('funds_use'); ?>" name="<?php echo $this->get_field_name('funds_use'); ?>" value="<?php echo esc_attr($funds_use); ?>" />
+            <label for="<?php echo $this->get_field_id('funds_use'); ?>">Where will the funds go?</label>
+            <textarea id="<?php echo $this->get_field_id('funds_use'); ?>" name="<?php echo $this->get_field_name('funds_use'); ?>" value="<?php echo esc_attr($funds_use); ?>" />
         </p><?php
     }
 
