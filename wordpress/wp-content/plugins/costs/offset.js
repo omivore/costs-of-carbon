@@ -6,7 +6,6 @@ function clearPlug() {
 
 function setPlug(newPane) {
     document.getElementById("xtra_offsetCalculator").appendChild(newPane);
-    alert("??:");
 }
 
 class Travel {
@@ -31,7 +30,6 @@ class Travel {
         // creating all cells
         for (var i = 0; i < 2; i++) {
             // creates a table row
-        alert("1");
             var row = document.createElement("tr");
             for (var j = 0; j < 2; j++) {
                 // Create a <td> element and a text node, make the text
@@ -40,11 +38,7 @@ class Travel {
                 var cell = document.createElement("td");
                 var cellText = document.createElement("img");
                 cellText.src = "wp-content/plugins/costs/imgs/" + images[count];
-        alert(images[count].substring(0, images[count].length -4));
-                callText.alt = "rip";
-                alert("4");
-                callText.alt = images[count].substring(0, images[count].length - 4);
-        alert("3");
+                cellText.alt = images[count].substring(0, images[count].length - 4);
                 cellText.height = "50";
                 cellText.addEventListener("click", function(event) {
                     alert(event.target);
@@ -60,7 +54,6 @@ class Travel {
             // add the row to the end of the table body
             tblBody.appendChild(row);
         }
-        alert("3");
  
         // put the <tbody> in the <table>
         tbl.appendChild(tblBody);
@@ -69,7 +62,6 @@ class Travel {
         pane.appendChild(tbl);
         /*offsetType.appendChild(backButton);
         offsetType.appendChild(nextButton);*/
-    alert("4");
         setPlug(pane);
     }
 
