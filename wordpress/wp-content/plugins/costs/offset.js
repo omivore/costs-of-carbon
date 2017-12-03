@@ -41,9 +41,8 @@ class Travel {
                 cellText.alt = images[count].substring(0, images[count].length - 4);
                 cellText.height = "50";
                 cellText.addEventListener("click", function(event) {
-                    this.type = event.target.alt;
-                    alert(Object.keys(this));
-                    subTypePage();
+                    trip.type = event.target.alt;
+                    trip.subTypePage();
                 });
 
                 cell.appendChild(cellText);
@@ -66,48 +65,51 @@ class Travel {
     }
 
     subTypePage() {
-    alert("called");
-        clearPlug();
-    alert("cleared");
-        var pane = document.createElement('div');
-        var typeList = document.createElement("ul");
-        var paneHeader = document.createElement('h1');
-        paneHeader.innerHTML = "Could you be more specific?";
-    alert("Define");
-        var subTypes = {
-            "car": ["Passenger", "Light Truck", "Motorcycle"],
-            "train": ["Intercity Rail", "Commuter Rail", "Transit Rail"],
-            "plane": ["<300 miles", "between 300 and 2300 miles", ">2300 miles"]
-        }
-alert("HDKJ");
-        if (this.type == "bus") {
-            passengersPage();
-            return;
-        } else {
-            var subType, cellText;
-            for (item of subTypes[this.type]) {
-                subType = document.createElement("li");
-                cellText = document.createElement("input");
-                cellText.setAttribute("type", "radio");
-                cellText.setAttribute("name", item);
-
-                typeList.appendChild(cellText);
-            }
-            pane.appendChild(paneHeader);
-            pane.appendChild(typeList);
+    	    clearPlug();
+    	    var pane = document.createElement('div');
+    	    var typeList = document.createElement("ul");
+    	    var paneHeader = document.createElement('h1');
+    	    paneHeader.innerHTML = "Could you be more specific?";
+   		alert("Define");
+    	    var subTypes = {
+     	       "car": ["Passenger", "Light Truck", "Motorcycle"],
+    	        "train": ["Intercity Rail", "Commuter Rail", "Transit Rail"],
+    	        "plane": ["<300 miles", "between 300 and 2300 miles", ">2300 miles"]
+     	   }
+       		if (trip.type == "bus") {
+        	    trip.passengersPage();
+        	    return;
+        	} else {
+        	    var subType, cellText, label;
+        	    console.log(trip.type);
+        	    for (let item of subTypes[trip.type]) {
+        	        subType = document.createElement("li");
+        	        cellText = document.createElement("input");
+        	        cellText.setAttribute("type", "radio");
+         	       cellText.setAttribute("name", "item");
+         	       label = document.createElement("label");
+         	       label.innerHTML = item;
+         	       subType.appendChild(cellText);
+         	       subType.appendChild(label);
+          	      typeList.appendChild(subType);
+          		}
+        	    pane.appendChild(paneHeader);
+       		    pane.appendChild(typeList);
             
-            var nextButton = document.createElement('span');
-            nextButton.className = "next round";
-            nextButton.innerHTML = "&#8250;";
-            nextButton.addEventListener("click", passengersPage);
-            pane.appendChild(nextButton);
-        }
+     	       var nextButton = document.createElement('span');
+       		   nextButton.className = "next round";
+         	   nextButton.innerHTML = "&#8250;";
+         	   nextButton.addEventListener("click", trip.passengersPage);
+         	   pane.appendChild(nextButton);
+        	}
 
-        setPlug(pane);
-    }
+      	 	setPlug(pane);
+   	}
 
     passengersPage() {
         alert("We're working");
+        var pane = document.createElement("div");
+        
     }
 
     distancePage() {
@@ -115,7 +117,7 @@ alert("HDKJ");
     }
 }
 
-new Travel();
+trip = new Travel();
 /*
 var backButton = document.createElement('span');
 backButton.className = "previous round";
@@ -127,19 +129,14 @@ backButton.addEventListener("click", function(event){
         page--;
     } else if (page == 3){
         document.getElementById("xtra_offsetCalculator").innerHTML = "";
-
         page--;
     }
 });
-
 var nextButton = document.createElement('span');
 nextButton.className = "next round";
 nextButton.innerHTML = "&#8250;";
-
 buttons.appendChild(backButton);
 buttons.appendChild(nextButton);
-
-
 /************************************
 //type of transportation, page 1
 var offsetType = document.createElement('div');
@@ -148,23 +145,18 @@ travelTypeHeader.innerHTML = "How are you traveling?";
 var images = ["car.png", "plane.png", "train.png", "bus.png"];
 var tbl = document.createElement("table");
 generate_table();
-
 offsetType.appendChild(travelTypeHeader);
 offsetType.appendChild(tbl);
 /*offsetType.appendChild(backButton);
 offsetType.appendChild(nextButton);*
-
 function generate_table() {
     // creates a <tbody> element
     var tblBody = document.createElement("tbody");
     var count = 0;
-
     // creating all cells
     for (var i = 0; i < 2; i++) {
-
         // creates a table row
         var row = document.createElement("tr");
-
     for (var j = 0; j < 2; j++) {
         // Create a <td> element and a text node, make the text
         // node the contents of the <td>, and put the <td> at
@@ -182,7 +174,6 @@ function generate_table() {
         } else if(count == 1){
             cellText.addEventListener("click", function(event){
                 document.getElementById("xtra_offsetCalculator").innerHTML = "";
-
             });
         } else if(count == 2){
             cellText.addEventListener("click", function(event){
@@ -191,24 +182,19 @@ function generate_table() {
                 page = 1.5;
             });
         }
-
         cell.appendChild(cellText);
         row.appendChild(cell);
         count++;
     }
-
     // add the row to the end of the table body
     tblBody.appendChild(row);
     }
-
     // put the <tbody> in the <table>
     tbl.appendChild(tblBody);
 }
-
 document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("xtra_offsetCalculator").appendChild(offsetType);
 });
-
 /***********************************
 //car type, page 1.5
 var carType = document.createElement('div');
@@ -222,16 +208,13 @@ carType.appendChild(carTypeHeader);
 var name = "carType";
 generate_radiobuttons("car");
 carType.appendChild(carButtonTbl);
-
 function generate_radiobuttons(type) {
     var tblBody = document.createElement("tbody");
     var count = 0;
-
     // creating all cells
     for (var i = 0; i < 3; i++) {
         // creates a table row
         var row = document.createElement("tr");
-
         for (var j = 0; j < 2; j++) {
             // Create a <td> element and a text node, make the text
             // node the contents of the <td>, and put the <td> at
@@ -248,16 +231,13 @@ function generate_radiobuttons(type) {
                     var cellText = document.createTextNode(trains[count]);
                 }
             }
-
             cell.appendChild(cellText);
             row.appendChild(cell);
         }
         count++;
-
         // add the row to the end of the table body
         tblBody.appendChild(row);
     }
-
     // put the <tbody> in the <table>
     if(type === "car") {
         carButtonTbl.appendChild(tblBody);
@@ -265,7 +245,6 @@ function generate_radiobuttons(type) {
         trainButtonTbl.appendChild(tblBody);
     }
 }
-
 /*****************************************
 //type of train, page 1.5
 var trainType = document.createElement('div');
@@ -279,7 +258,6 @@ trainType.appendChild(trainTypeHeader);
 var name = "trainType";
 generate_radiobuttons("train");
 trainType.appendChild(trainButtonTbl);
-
 /********************************************
 //distance traveled in airplane, page 1.5
 var airplaneType = document.createElement('div');
@@ -293,7 +271,5 @@ trainType.appendChild(trainTypeHeader);
 var name = "trainType";
 generate_radiobuttons("train");
 trainType.appendChild(trainButtonTbl);
-
 /****************************************/
 //hoe many passengers
-
