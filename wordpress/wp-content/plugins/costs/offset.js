@@ -41,9 +41,7 @@ class Travel {
                 cellText.alt = images[count].substring(0, images[count].length - 4);
                 cellText.height = "50";
                 cellText.addEventListener("click", function(event) {
-                    alert(event.target.alt);
                     this.type = event.target.alt;
-                    alert(event.target.alt);
                     this.subTypePage();
                 });
 
