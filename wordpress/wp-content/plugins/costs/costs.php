@@ -18,6 +18,7 @@ class xtra_Costs_Caclulator extends WP_Widget {
     public function widget( $args, $instance ) {
         ?>
         <div id="xtra_offsetCalculator"></div>
+        <link rel="stylesheet" href="wp-content/plugins/costs/offsetstyle.css" type="text/css" media="all" />
         <script src="wp-content/plugins/costs/offset.js"></script>
         <?php
     }
