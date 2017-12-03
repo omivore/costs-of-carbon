@@ -43,6 +43,7 @@ class Travel {
                 cellText.addEventListener("click", function(event) {
                     alert(event.target.alt);
                     this.type = event.target.alt;
+                    alert(event.target.alt);
                     this.subTypePage();
                 });
 
