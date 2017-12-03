@@ -115,6 +115,7 @@ buttons.appendChild(nextButton);
 
 /************************************/
 //type of transportation, page 1
+alert("YEP");
 var offsetType = document.createElement('div');
 var travelTypeHeader = document.createElement('h1');
 travelTypeHeader.innerHTML = "How are you traveling?";

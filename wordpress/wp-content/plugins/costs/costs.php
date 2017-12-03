@@ -16,12 +16,10 @@ class xtra_Costs_Caclulator extends WP_Widget {
 
     // Create the widget output.
     public function widget( $args, $instance ) {
-        $blog_title = get_bloginfo( 'name' );
-        $tagline = get_bloginfo( 'description' );
-        echo $args['before_widget'] . $args['before_title'] . $instance['funds_use'] . $args['after_title']; ?>
+        ?>
         <div id="xtra_offsetCalculator"></div>
         <script src="wp-content/plugins/costs/offset.js"></script>
-        <?php echo $args['after_widget'];
+        <?php
     }
 
     // Create the admin area widget settings form.
